@@ -1,0 +1,88 @@
+@import '@fontsource/poppins';
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: #212529;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+/* Hover Effect */
+.glass:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass.glass-no-hover:hover {
+  background: rgba(255, 255, 255, 0.5); /* Maintain original background */
+  transform: none; /* Disable scaling */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Maintain original shadow */
+}
+
+.card {
+  background: #f2f6fa; /* Subtle grayish-blue tint */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Minimal shadow */
+}
+
+.button {
+  background: linear-gradient(135deg, #10A3C2, #66C5D8);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(16, 163, 194, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 6px 16px rgba(16, 163, 194, 0.5);
+  }
+}
+
+.button:hover {
+  background-color: rgba(6, 108, 128, 0.5); /* Darker blue */
+}
+
+.tag-verified {
+  background-color: #28a745; /* Soft green */
+  color: white;
+}
+
+.tag-submitted {
+  background-color: #17a2b8; /* Light blue */
+  color: white;
+}
+
+.tag-remove {
+  background-color: #dc3545; /* Muted red */
+  color: white;
+}
+
+.dashboard-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #C2EAF1, #F4FAFC);
+}
